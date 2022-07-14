@@ -1,0 +1,55 @@
+.contenedor, .wave-container{
+    max-width: 1400px;
+    overflow: hidden;
+    margin: auto;
+    padding: 0 0 80px 50px;
+}
+
+.main{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+
+.parrafo{
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.titulo.left{
+    text-align: left;
+}
+
+.main .contenedor-textos-main{
+    width: 40%;
+}
+
+.main img {
+    width: 48%;
+}
+
+.info{
+    background: var(--primary);
+    color: #fff;
+}
+
+
+@media (max-width: 800px) {
+
+    .main {
+      flex-direction: column;
+
+    }
+    .main .contenedor-textos-main{
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    
+    .main .contenedor-textos-main .parrafo{
+        margin-right: 50px;
+    }
+    .main img {
+        width:100%;
+    }
+  }
