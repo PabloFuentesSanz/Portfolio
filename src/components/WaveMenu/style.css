@@ -40,7 +40,10 @@
 .separate{
     margin-top: 1em;
 }
-
+.linkPr{
+    color: var(--primary);
+    text-decoration: none;
+}
 .imgsTechs{
     display: flex;
     flex-direction: row;

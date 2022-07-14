@@ -15,6 +15,7 @@ function index() {
             Actualmente estoy trabajando como desarrollador FullStack con Angular y Scala, pero  estoy ampliando mis conocimientos en el desarrollo de aplicaciones con
             React y Redux, tecnologías con las que tengo una gran experiencia y que me apasionan.
           </p>
+          <small>- Este Portfolio se ha desarrollado con React y publicado en Vercel a través de un despligue continuo desde su <a className="linkPr" href="https://github.com/PabloFuentesSanz/Portfolio" target="_blank">repositorio de Git</a>.</small>
         </div>
         <img src="./assets/ilustracion1.svg" alt="" />
       </section>
