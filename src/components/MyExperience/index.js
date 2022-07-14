@@ -20,14 +20,11 @@ function MyExperience() {
             />{" "}
             Alten Delivery Center
           </h3>
-          <p class="content">Dec 2021 - Present</p>ç
+          <p class="content">Dec 2021 - Present</p>
           <span className="smallText">
             <small>
-              Becado en los años 2019 y 2020 por la Universidad Politécnica de
-              Madrid para trabajar en el proyecto de desarrollo de una
-              aplicación web para la gestión de la información de los alumnos de
-              la UPM con PHP, así como trabajar en un proyecto de investigación
-              sobre DevOps
+              Actualmente trabajando para un proyecto internacional para la empresa Belga de movilidad de tráfico MacQ. Desempeño un puesto de
+              FullStack Developer con un Frontend en Angular con TypeScript y un Backend con Scala.
             </small>
           </span>
         </article>
@@ -48,11 +45,8 @@ function MyExperience() {
           <p class="content">Feb 2021 - Dec 2021</p>
           <span className="smallText">
             <small>
-              Becado en los años 2019 y 2020 por la Universidad Politécnica de
-              Madrid para trabajar en el proyecto de desarrollo de una
-              aplicación web para la gestión de la información de los alumnos de
-              la UPM con PHP, así como trabajar en un proyecto de investigación
-              sobre DevOps
+              Trabajé durante un año como FullStack developer en esta Startup en diversos proyectos con React, NodeJS, Python, PHP, etc. Mi puesto me 
+              permitía desarrollar diversas aplicaciones pasando por todas las fases de ingeniería del Software desde el inicio hasta el despliegue en producción.
             </small>
           </span>
         </article>
@@ -73,11 +67,11 @@ function MyExperience() {
           <p class="content">2019 - 2020</p>
           <span className="smallText">
             <small>
-              Becado en los años 2019 y 2020 por la Universidad Politécnica de
+              Durante la realización de mi grado en Ingeniería del Software, fuí becado en los años 2019 y 2020 por la Universidad Politécnica de
               Madrid para trabajar en el proyecto de desarrollo de una
               aplicación web para la gestión de la información de los alumnos de
               la UPM con PHP, así como trabajar en un proyecto de investigación
-              sobre DevOps
+              sobre DevOps.
             </small>
           </span>
         </article>
@@ -98,11 +92,8 @@ function MyExperience() {
           <p class="content">Mar. 2017 - Sep. 2017</p>
           <span className="smallText">
             <small>
-              Becado en los años 2019 y 2020 por la Universidad Politécnica de
-              Madrid para trabajar en el proyecto de desarrollo de una
-              aplicación web para la gestión de la información de los alumnos de
-              la UPM con PHP, así como trabajar en un proyecto de investigación
-              sobre DevOps
+              Tras la finalización de mi grado superior en Desarrollo de aplicaciones web, comencé mi carrera profesional en esta consultora
+              donde tuve el primer contacto con el mundo laboral y la oportunidad de aprender la metodología de trabajo en un proyecto de desarrollo.	
             </small>
           </span>
         </article>

@@ -9,11 +9,11 @@ function index() {
           <h2 className="titulo left">About Me</h2>
           <p className="parrafo">
             Hola, soy Pablo Fuentes y soy un ingeniero de Software con una
-            amplia experiencia en el desarrollo de aplicaciones web. Me encanta
-            trabajar en equipo y me gusta aprender nuevas tecnologías.
-            Actualmente me estoy centrando en el desarrollo de aplicaciones con
-            ReactJs y Node, pero también tengo experienta en tecnologías como
-            Angular, Scala, PHP y Java.
+            amplia experiencia en el desarrollo de aplicaciones web. <br/><br/>Soy un apasionado de la tecnología y la programación, y me encanta
+            pasar parte de mi tiempo libre aprendiendo, mejorando y poniendome al día en temas de desarrollo. 
+            <br/><br/>
+            Actualmente estoy trabajando como desarrollador FullStack con Angular y Scala, pero  estoy ampliando mis conocimientos en el desarrollo de aplicaciones con
+            React y Redux, tecnologías con las que tengo una gran experiencia y que me apasionan.
           </p>
         </div>
         <img src="./assets/ilustracion1.svg" alt="" />

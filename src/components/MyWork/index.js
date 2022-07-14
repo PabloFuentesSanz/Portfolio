@@ -45,7 +45,10 @@ function MyWork() {
               />
               <div className="containerCard">
                 <p>Netflix Clone</p>
-                <span className="smallText">Netflix clone with React and Redux to delve into these technologies</span>
+                <span className="smallText">
+                  Desarrollo de un clon de Netflix con React y Redux consumiendo
+                  la API de películas themoviedb
+                </span>
                 <img
                   src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
                   className="gitImg"
@@ -65,10 +68,18 @@ function MyWork() {
                 alt="Avatar"
               />
               <div className="containerCard">
-                <p>Voidi Project</p>
+                <p>Voidi TFG</p>
                 <span className="smallText">
-                Final degree project realize React, NextJs, Firebase, MongoDB, NodeJs, Express
+                  Proyecto propio de aplicación de búsqueda de empleo
+                  desarrollado con React, NextJs, Firebase, MongoDB, NodeJs,
+                  Express
                 </span>
+                <br />
+                <div className="demo">
+                  <a href="https://voidi.vercel.app" target="_blank">
+                    Demo Online{" "}
+                  </a>
+                </div>
                 <img
                   src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
                   className="gitImg"
@@ -90,7 +101,8 @@ function MyWork() {
               <div className="containerCard">
                 <p>Tinder Clone</p>
                 <span className="smallText">
-                 Tinder clone realize with MERN stack (MongoDB, Express, NodeJs, React)
+                  Desarrollo de un clon de tinder haciendo uso del MERN stack
+                  (MongoDB, Express, NodeJs, React)
                 </span>
                 <img
                   src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"

@@ -12,7 +12,15 @@
   gap: 30px 30px;
   justify-content: center;
 }
+.demo{
+  margin-top: 10px;
+  font-weight: 800;
+}
+.demo > a{
+  text-decoration: none;
+  color: var(--primary);
 
+}
 .card {
   background-color: white;
   padding-bottom: 1em;
