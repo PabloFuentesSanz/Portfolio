@@ -33,7 +33,21 @@
     background: var(--primary);
     color: #fff;
 }
+.imgTech{
+    width: 50px;
+    margin-right: 1em;
+}
+.separate{
+    margin-top: 1em;
+}
 
+.imgsTechs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
 
 @media (max-width: 800px) {
 

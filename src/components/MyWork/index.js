@@ -45,9 +45,7 @@ function MyWork() {
               />
               <div className="containerCard">
                 <p>Netflix Clone</p>
-                <h4>
-                  <b>React and Redux</b>
-                </h4>
+                <span className="smallText">Netflix clone with React and Redux to delve into these technologies</span>
                 <img
                   src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
                   className="gitImg"
@@ -67,10 +65,10 @@ function MyWork() {
                 alt="Avatar"
               />
               <div className="containerCard">
-                <p>TFG Software Engineering</p>
-                <h4>
-                  <b>React, NextJs, Firebase, MongoDB, NodeJs, Express</b>
-                </h4>
+                <p>Voidi Project</p>
+                <span className="smallText">
+                Final degree project realize React, NextJs, Firebase, MongoDB, NodeJs, Express
+                </span>
                 <img
                   src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
                   className="gitImg"
@@ -91,9 +89,9 @@ function MyWork() {
               />
               <div className="containerCard">
                 <p>Tinder Clone</p>
-                <h4>
-                  <b>React, NodeJs, Express, MongoDB</b>
-                </h4>
+                <span className="smallText">
+                 Tinder clone realize with MERN stack (MongoDB, Express, NodeJs, React)
+                </span>
                 <img
                   src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
                   className="gitImg"
