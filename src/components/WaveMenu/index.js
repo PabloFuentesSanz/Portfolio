@@ -13,7 +13,7 @@ function index() {
             pasar parte de mi tiempo libre aprendiendo, mejorando y poniendome al día en temas de desarrollo. 
             <br/><br/>
             Actualmente estoy trabajando como desarrollador FullStack con Angular y Scala, pero  estoy ampliando mis conocimientos en el desarrollo de aplicaciones con
-            React y Redux, tecnologías con las que tengo una gran experiencia y que me apasionan.
+            React y Redux, tecnologías que me apasionan.
           </p>
           <a className="linkPr" href="./assets/cvPablo.pdf" download="PabloFuentesCV.pdf"><p><img src="https://www.casascarpinteria.com/wp-content/uploads/2021/02/Icono-Descargar.png" className="imgDow"/>Descarga aquí mi CV</p></a>
           <small>- Este Portfolio se ha desarrollado con React y publicado en Vercel a través de un despliegue continuo desde su <a className="linkPr" href="https://github.com/PabloFuentesSanz/Portfolio" target="_blank">repositorio de Git</a>.</small>
