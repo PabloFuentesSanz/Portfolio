@@ -33,9 +33,9 @@ function Contact() {
           <input className="input" type="submit" value="Enviar" />
         </form>
         <p className="center">
-          <span className="marginR">Telf: +34 638781148</span>
+          <span className="marginR"><small>Telf:</small> +34 638781148</span>
           <span className="marginR">
-            Email: pablofuentessanzfuentes@gmail.com
+            <small>Email:</small> fuentessanzpablo@gmail.com
           </span>
           <span className="marginR">
             <a
