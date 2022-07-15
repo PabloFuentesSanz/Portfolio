@@ -8,8 +8,13 @@ footer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-right: 40px;
 }
-
+.linkContact{
+    width: 25px;
+    margin-bottom: -8px;
+    margin-right: 8px;
+}
 .input{
     background: transparent;
     border: 0;
@@ -46,4 +51,27 @@ input[type="submit"]:hover{
     cursor: pointer;
     color: tomato;
     background: #fff;
+}
+
+.linkContact{
+    color: white;
+    text-decoration: none;
+}
+
+.marginR{
+    margin-top: 20px;
+}
+.center{
+    display: flex;
+    margin-top: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-right: 40px;
+    gap: 10%;
+
+}
+.row{
+    width: 100%;
+    display: flex;
+    gap: 1%;
 }
