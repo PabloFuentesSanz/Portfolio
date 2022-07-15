@@ -47,7 +47,7 @@ function Contact() {
                 src="https://telecos.upc.edu/es/shared/images/social/logos-rodons/linkedin-circle.png/@@images/a17d006e-5c0d-4004-9fe7-650c7fabd690.png"
                 className="linkContact"
               />
-              Linkdin
+              Linkedin
             </a>
           </span>
           <span className="marginR">
