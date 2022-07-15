@@ -20,7 +20,7 @@ function MyExperience() {
             />{" "}
             Alten Delivery Center
           </h3>
-          <p class="content">Dec 2021 - Present</p>
+          <p className="content">Dec 2021 - Present</p>
           <span className="smallText">
             <small>
               Actualmente trabajando como FullStack developer para un proyecto internacional para la empresa Belga de movilidad de tráfico MacQ. 
@@ -42,7 +42,7 @@ function MyExperience() {
             />{" "}
             Zalcu
           </h3>
-          <p class="content">Feb 2021 - Dec 2021</p>
+          <p className="content">Feb 2021 - Dec 2021</p>
           <span className="smallText">
             <small>
             Trabajé durante un año como FullStack developer en esta Startup. Mi puesto me permitía desarrollar diversas aplicaciones pasando por todas las fases de ingeniería del Software desde el inicio hasta el despliegue en producción.
@@ -64,7 +64,7 @@ function MyExperience() {
             />{" "}
             Intern UPM
           </h3>
-          <p class="content">2019 - 2020</p>
+          <p className="content">2019 - 2020</p>
           <span className="smallText">
             <small>
               Durante la realización de mi grado en Ingeniería del Software, fuí becado en los años 2019 y 2020 por la Universidad Politécnica de
@@ -89,7 +89,7 @@ function MyExperience() {
             />{" "}
             Accenture
           </h3>
-          <p class="content">Mar. 2017 - Sep. 2017</p>
+          <p className="content">Mar. 2017 - Sep. 2017</p>
           <span className="smallText">
             <small>
               Tras la finalización de mi grado superior en Desarrollo de aplicaciones web, comencé mi carrera profesional en esta consultora

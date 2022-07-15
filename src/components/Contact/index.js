@@ -1,36 +1,49 @@
-import React from "react";
+import React, { useRef }  from "react";
 import "./style.css";
+import emailjs from 'emailjs-com'
 function Contact() {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_cjlq7pg', 'template_hzo0mox', form.current, 'J1SB-vTrUQNkKlJ1i')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <footer id="contacto">
       <div className="contenedor">
         <h2 className="titulo">Contact Me</h2>
-        <form action="" className="form">
+        <form className="form" ref={form} onSubmit={sendEmail}>
           <div className="row">
             <input
               className="input"
               type="text"
-              name=""
-              id=""
+              name="from_name"
+              id="from_name"
               placeholder="Nombre"
             />
             <input
               className="input"
               type="email"
-              name=""
-              id=""
+              name="email"
+              id="email"
               placeholder="Email"
             />
           </div>
           <textarea
             className="input"
-            name=""
-            id=""
+            name="message"
+            id="message"
             cols="30"
             rows="10"
             placeholder="Mensaje"
           ></textarea>
-          <input className="input" type="submit" value="Enviar" />
+          <input className="input" type="submit" onClick={sendEmail} value="Enviar" />
         </form>
         <p className="center">
           <span className="marginR"><small>Telf:</small> +34 638781148</span>
