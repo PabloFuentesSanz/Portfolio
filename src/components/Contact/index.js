@@ -12,6 +12,7 @@ function Contact() {
       }, (error) => {
           console.log(error.text);
       });
+      alert("Email enviado correctamente!");
   };
 
   return (
