@@ -44,6 +44,10 @@
     color: var(--primary);
     text-decoration: none;
 }
+.imgDow{
+    width: 15px !important ;
+    margin-right: 10px;
+}
 .imgsTechs{
     display: flex;
     flex-direction: row;
