@@ -29,7 +29,7 @@ function Contact() {
               type="text"
               name="from_name"
               id="from_name"
-              placeholder="Nombre"
+              placeholder={t("Name")} 
             />
             <input
               className="input"
@@ -45,9 +45,9 @@ function Contact() {
             id="message"
             cols="30"
             rows="10"
-            placeholder="Mensaje"
+            placeholder={t("Msg")} 
           ></textarea>
-          <input className="input" type="submit" onClick={sendEmail} value="Enviar" />
+          <input className="input" type="submit" onClick={sendEmail} value={t("Send")} />
         </form>
         <p className="center">
           <span className="marginR"><small>Telf:</small> +34 638781148</span>

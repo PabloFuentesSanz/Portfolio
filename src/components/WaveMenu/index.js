@@ -12,15 +12,12 @@ function WaveMenu() {
         <div className="contenedor-textos-main">
           <h2 className="titulo left">{t("About")}</h2>
           <p className="parrafo">
-            Hola, soy Pablo Fuentes y soy un ingeniero de Software con una
-            amplia experiencia en el desarrollo de aplicaciones web. <br/><br/>Soy un apasionado de la tecnología y la programación, y me encanta
-            pasar parte de mi tiempo libre aprendiendo, mejorando y poniendome al día en temas de desarrollo. 
+            {t("about1")} <br/><br/>{t("about2")}
             <br/><br/>
-            Actualmente estoy trabajando como desarrollador FullStack con Angular y Scala, pero  estoy ampliando mis conocimientos en el desarrollo de aplicaciones con
-            React y Redux, tecnologías que me apasionan.
+            {t("about3")}
           </p>
-          <a className="linkPr" href="./assets/cvPablo.pdf" download="PabloFuentesCV.pdf"><p><img src="https://www.casascarpinteria.com/wp-content/uploads/2021/02/Icono-Descargar.png" className="imgDow"/>Descarga aquí mi CV</p></a>
-          <small>- Este Portfolio se ha desarrollado con React y publicado en Vercel a través de un despliegue continuo desde su <a className="linkPr" href="https://github.com/PabloFuentesSanz/Portfolio" target="_blank">repositorio de Git</a>.</small>
+          <a className="linkPr" href="./assets/cvPablo.pdf" download="PabloFuentesCV.pdf"><p><img src="https://www.casascarpinteria.com/wp-content/uploads/2021/02/Icono-Descargar.png" className="imgDow"/>{t("descarga")}</p></a>
+          <small>{t("port")}<a className="linkPr" href="https://github.com/PabloFuentesSanz/Portfolio" target="_blank">{t("repo")}</a>.</small>
         </div>
         <img src="./assets/ilustracion1.svg" alt="" />
       </section>
