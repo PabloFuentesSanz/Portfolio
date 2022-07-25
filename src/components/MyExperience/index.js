@@ -23,11 +23,11 @@ function MyExperience() {
             />{" "}
             Alten Delivery Center
           </h3>
-          <p className="content">Dec 2021 - Present</p>
+          <p className="content">{t("dec")}</p>
           <span className="smallText">
             <small>
-              Actualmente trabajando como FullStack developer para un proyecto internacional para la empresa Belga de movilidad de tráfico MacQ. 
-              <br/><br/><b>Tecnologías:</b> Angular, TypeScript, Scala, Unit test Back y Front, MongoDB, Jira, Jenkins, BitBucket, Confluence.
+              {t("alten1")}
+              <br/><br/><b>{t("techsN")}</b> Angular, TypeScript, Scala, Unit test Back - Front, MongoDB, Jira, Jenkins, BitBucket, Confluence.
             </small>
           </span>
         </article>
@@ -45,11 +45,11 @@ function MyExperience() {
             />{" "}
             Zalcu
           </h3>
-          <p className="content">Feb 2021 - Dec 2021</p>
+          <p className="content">{t("feb")}</p>
           <span className="smallText">
             <small>
-            Trabajé durante un año como FullStack developer en esta Startup. Mi puesto me permitía desarrollar diversas aplicaciones pasando por todas las fases de ingeniería del Software desde el inicio hasta el despliegue en producción.
-            <br/><br/><b>Tecnologías:</b> React, NodeJS, Python, PHP, MongoDB, MySQL,Linux, Git, AmazonWebServices
+            {t("zalcu1")}
+            <br/><br/><b>{t("techsN")}</b> React, NodeJS, Python, PHP, MongoDB, MySQL,Linux, Git, AmazonWebServices
             </small>
           </span>
         </article>
@@ -65,16 +65,12 @@ function MyExperience() {
               src="https://www.itd.upm.es/wp-content/uploads/2020/10/LOGOTIPO-color-PNG.png"
               className="logoCompany"
             />{" "}
-            Intern UPM
+            {t("intern")}
           </h3>
           <p className="content">2019 - 2020</p>
           <span className="smallText">
             <small>
-              Durante la realización de mi grado en Ingeniería del Software, fuí becado en los años 2019 y 2020 por la Universidad Politécnica de
-              Madrid para trabajar en el proyecto de desarrollo de una
-              aplicación web para la gestión de la información de los alumnos de
-              la UPM con <b>PHP</b>, así como trabajar en un proyecto de investigación
-              sobre <b>DevOps</b>.
+            {t("upm1")} <b>PHP</b>, {t("upm2")} <b>DevOps</b>.
             </small>
           </span>
         </article>
@@ -95,9 +91,8 @@ function MyExperience() {
           <p className="content">Mar. 2017 - Sep. 2017</p>
           <span className="smallText">
             <small>
-              Tras la finalización de mi grado superior en Desarrollo de aplicaciones web, comencé mi carrera profesional en esta consultora
-              donde tuve el primer contacto con el mundo laboral y la oportunidad de aprender la metodología de trabajo en un proyecto de desarrollo.
-            <br/><br/><b>Tecnologías:</b> Java, JUnit, PLSQL
+              {t("acc")}
+            <br/><br/><b>{t("techsN")}</b> Java, JUnit, PLSQL
             </small>
           </span>
         </article>

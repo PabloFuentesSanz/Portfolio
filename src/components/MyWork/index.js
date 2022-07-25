@@ -50,8 +50,7 @@ function MyWork() {
               <div className="containerCard">
                 <p>Netflix Clone</p>
                 <span className="smallText">
-                  Desarrollo de un clon de Netflix con React y Redux consumiendo
-                  la API de películas themoviedb
+                  {t("net")}
                 </span>
                 <img
                   src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
@@ -74,9 +73,7 @@ function MyWork() {
               <div className="containerCard">
                 <p>Voidi TFG</p>
                 <span className="smallText">
-                  Proyecto propio de aplicación de búsqueda de empleo
-                  desarrollado con React, NextJs, Firebase, MongoDB, NodeJs,
-                  Express
+                  {t("voidi")}
                 </span>
                 <br />
                 <div className="demo">
@@ -105,8 +102,7 @@ function MyWork() {
               <div className="containerCard">
                 <p>Tinder Clone</p>
                 <span className="smallText">
-                  Desarrollo de un clon de tinder haciendo uso del MERN stack
-                  (MongoDB, Express, NodeJs, React)
+                  {t("tinder")}
                 </span>
                 <img
                   src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
