@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./style.css";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
+
 function MyWork() {
+  const { t } = useTranslation();
+
   const [myRepo, setRepo] = useState([]);
   const repos = [
     "Netflix-Clone-React-Redux",
@@ -30,7 +34,7 @@ function MyWork() {
   return (
     <section className="galeria">
       <div className="contenedor">
-        <h2 className="titulo">Some Personal Projects</h2>
+        <h2 className="titulo">{t("Pro")}</h2>
         <article className="galeria-cont">
           <div className="card">
             <a

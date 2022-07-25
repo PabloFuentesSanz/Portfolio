@@ -1,12 +1,16 @@
 import React from "react";
 import "./style.css";
+import { useTranslation } from "react-i18next";
 
-function index() {
+
+function WaveMenu() {
+  const { t } = useTranslation();
+
   return (
     <>
       <section className="wave-container main">
         <div className="contenedor-textos-main">
-          <h2 className="titulo left">About Me</h2>
+          <h2 className="titulo left">{t("About")}</h2>
           <p className="parrafo">
             Hola, soy Pablo Fuentes y soy un ingeniero de Software con una
             amplia experiencia en el desarrollo de aplicaciones web. <br/><br/>Soy un apasionado de la tecnología y la programación, y me encanta
@@ -22,7 +26,7 @@ function index() {
       </section>
       <section className="info">
         <div className="contenedor">
-          <h2 className="titulo left">My Favorite Techs</h2>
+          <h2 className="titulo left">{t("Techs")}</h2>
           <div className="imgsTechs">
             <span className="separate">
               <a href="https://es.reactjs.org/" target="_blank" title="React"><img
@@ -112,4 +116,4 @@ function index() {
   );
 }
 
-export default index;
+export default WaveMenu;

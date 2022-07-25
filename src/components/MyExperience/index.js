@@ -1,10 +1,13 @@
 import React from "react";
 import "./style.css";
+import { useTranslation } from "react-i18next";
 
 function MyExperience() {
+  const { t } = useTranslation();
+
   return (
     <section className="cards contenedor">
-      <h2 className="titulo">My Experience</h2>
+      <h2 className="titulo">{t("Expe")}</h2>
       <div className="content-cards">
         <article className="card cardExp">
           <img

@@ -1,8 +1,11 @@
 import React, { useRef }  from "react";
 import "./style.css";
 import emailjs from 'emailjs-com'
+import { useTranslation } from "react-i18next";
+
 function Contact() {
   const form = useRef();
+  const { t } = useTranslation();
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -18,7 +21,7 @@ function Contact() {
   return (
     <footer id="contacto">
       <div className="contenedor">
-        <h2 className="titulo">Contact Me</h2>
+        <h2 className="titulo">{t("Cont")}</h2>
         <form className="form" ref={form} onSubmit={sendEmail}>
           <div className="row">
             <input
