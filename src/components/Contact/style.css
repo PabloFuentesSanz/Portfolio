@@ -1,77 +1,79 @@
-footer{
-    background:var(--primary);
-    color: #fff;
+footer {
+  background: var(--primary);
+  color: #fff;
 }
 
-
-.form{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-right: 40px;
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 40px;
 }
-.linkContact{
-    width: 25px;
-    margin-bottom: -8px;
-    margin-right: 8px;
+.linkContact {
+  width: 25px;
+  margin-bottom: -8px;
+  margin-right: 8px;
+  transition: all 0.23s ease-in-out;
 }
-.input{
-    background: transparent;
-    border: 0;
-    color: #fff;
-    outline: none;
-    border: 1px  solid #fff;
-    padding: 20px 10px;
+.linkContact:hover {
+  transform: scale(1.2);
 }
-
-.input::placeholder{
-    color: #fff;
-    font-family: 'raleway', 'sans-serif';
+.input {
+  background: transparent;
+  border: 0;
+  color: #fff;
+  outline: none;
+  border: 1px solid #fff;
+  padding: 20px 10px;
 }
 
-input[type="text"], 
-input[type="email"]{
-    display: inline-block;
-    width: 49%;
-    margin-bottom: 30px;
+.input::placeholder {
+  color: #fff;
+  font-family: 'raleway', 'sans-serif';
 }
 
-.form textarea{
-    width: 100%;
-    margin-bottom: 15px;
+input[type='text'],
+input[type='email'] {
+  display: inline-block;
+  width: 49%;
+  margin-bottom: 30px;
 }
 
-input[type="submit"]{
-    width: 120px;
-    text-align: center;
-    padding: 14px 0;
+.form textarea {
+  width: 100%;
+  margin-bottom: 15px;
 }
 
-input[type="submit"]:hover{
-    cursor: pointer;
-    color: tomato;
-    background: #fff;
+input[type='submit'] {
+  width: 120px;
+  text-align: center;
+  padding: 14px 0;
 }
 
-.linkContact{
-    color: white;
-    text-decoration: none;
+input[type='submit']:hover {
+  cursor: pointer;
+  color: tomato;
+  background: #fff;
 }
 
-.marginR{
-    margin-top: 20px;
+.linkContact {
+  color: white;
+  text-decoration: none;
 }
-.center{
-    display: flex;
-    margin-top: 2em;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-right: 30px;
-    gap: 10%;
 
+.marginR {
+  margin-top: 20px;
 }
-.row{
-    width: 100%;
-    display: flex;
-    gap: 1%;
+.center {
+  display: flex;
+  margin-top: 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-right: 30px;
+  gap: 10%;
+}
+.row {
+  width: 100%;
+  display: flex;
+  gap: 1%;
 }

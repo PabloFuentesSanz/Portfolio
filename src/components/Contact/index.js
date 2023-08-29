@@ -21,34 +21,7 @@ function Contact() {
   return (
     <footer id="contacto">
       <div className="contenedor">
-        <h2 className="titulo">{t("Cont")}</h2>
-        <form className="form" ref={form} onSubmit={sendEmail}>
-          <div className="row">
-            <input
-              className="input"
-              type="text"
-              name="from_name"
-              id="from_name"
-              placeholder={t("Name")} 
-            />
-            <input
-              className="input"
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Email"
-            />
-          </div>
-          <textarea
-            className="input"
-            name="message"
-            id="message"
-            cols="30"
-            rows="10"
-            placeholder={t("Msg")} 
-          ></textarea>
-          <input className="input" type="submit" onClick={sendEmail} value={t("Send")} />
-        </form>
+       
         <p className="center">
           <span className="marginR"><small>Telf:</small> +34 638781148</span>
           <span className="marginR">

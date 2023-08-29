@@ -27,7 +27,7 @@ function MyExperience() {
           <span className="smallText">
             <small>
               {t("alten1")}
-              <br/><br/><b>{t("techsN")}</b> Angular, TypeScript, Scala, Unit test Back - Front, MongoDB, Jira, Jenkins, BitBucket, Confluence.
+              <br/><br/><b>{t("techsN")}</b> Angular, TypeScript, Scala, Unit test Back (Play, Mockito) - Front (Jasmine, TestBed), MongoDB, Jira, Jenkins, BitBucket, Confluence.
             </small>
           </span>
         </article>

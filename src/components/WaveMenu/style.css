@@ -13,7 +13,6 @@
 
 
 .parrafo{
-    text-align: justify;
     margin-bottom: 20px;
 }
 
@@ -36,6 +35,10 @@
 .imgTech{
     width: 50px;
     margin-right: 1em;
+    transition: all 0.23s ease-in-out;
+}
+.imgTech:hover{
+    transform: scale(1.2);
 }
 .separate{
     margin-top: 1em;
@@ -43,6 +46,7 @@
 .linkPr{
     color: var(--primary);
     text-decoration: none;
+    margin-left: 4px;
 }
 .imgDow{
     width: 15px !important ;
