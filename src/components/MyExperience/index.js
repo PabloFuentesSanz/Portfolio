@@ -88,7 +88,7 @@ function MyExperience() {
             />{" "}
             Accenture
           </h3>
-          <p className="content">Mar. 2017 - Sep. 2017</p>
+          <p className="content">2017</p>
           <span className="smallText">
             <small>
               {t("acc")}
