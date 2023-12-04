@@ -181,7 +181,7 @@ function MyWork() {
             >
               <img
                 className="imgCard"
-                src="https://private-user-images.githubusercontent.com/51823158/271328543-293a2b6c-95e0-4c43-85e5-9a15c7628bbf.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDE3MDIxMDIsIm5iZiI6MTcwMTcwMTgwMiwicGF0aCI6Ii81MTgyMzE1OC8yNzEzMjg1NDMtMjkzYTJiNmMtOTVlMC00YzQzLTg1ZTUtOWExNWM3NjI4YmJmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjA0VDE0NTY0MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWE0MGY2MTMyMmIyZDMyODU3ZTgwZjBiNWM1ZjM5YTQ0NTEyNDM3YjY3NDVhYWIyYTAwNDNjNzU2ZTY3Nzg4YTAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.E8G44jWoJlLJ_iKaNu8Cmsy1sxCKGvFANbRdk2-xCdE"
+                src="./assets/dcycle.png"
                 alt="Avatar"
               />
             </a>
