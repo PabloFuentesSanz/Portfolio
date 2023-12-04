@@ -14,6 +14,7 @@
 }
 .demo{
   margin-top: 10px;
+  margin-bottom: 13px;
   font-weight: 800;
 }
 .demo > a{
@@ -25,6 +26,7 @@
   background-color: white;
   padding-bottom: 1em;
   box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
 }
 
 
@@ -46,12 +48,14 @@
   stroke: none;
    fill: #f5576c;
 }
-
+.techsImgs{
+  padding-top: 2em;
+  display: flex;
+}
 .gitImg{
+    margin-right: 1em;
     width: 25px; 
-    position:absolute; 
-    bottom: 10px;   
-    left: 10px;
+
 }
 .svg-wave{
   height: 150px;
@@ -82,9 +86,11 @@
 .imgCard{
   width: 100%;
   object-fit: cover;
+  border-radius: 10px 10px 0px 0px;
 }
 
 .linkNoStyle{
   text-decoration: none;
   color: black;
+  margin-right: 1em;
 }

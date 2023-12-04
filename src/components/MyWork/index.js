@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './style.css';
 import axios from 'axios';
 import { useTranslation } from 'react-i18next';
+import { Tooltip } from '@mui/material';
 
 function MyWork() {
   const { t } = useTranslation();
@@ -57,16 +58,46 @@ function MyWork() {
                   Demo Online{' '}
                 </a>
               </div>
-              <a
-                href="https://github.com/PabloFuentesSanz/TFG-Voidi-React-NextJs"
-                className="linkNoStyle"
-                target="_blank"
-              >
-                <img
-                  src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
-                  className="gitImg"
-                />
-              </a>
+              <Tooltip title="React">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                    className="gitImg"
+                  />
+                </Tooltip>
+                <Tooltip title="NextJS">
+                  <img
+                    src="./assets/next.png"
+                    className="gitImg"
+                  />
+                </Tooltip>
+                <Tooltip title="NodeJs">
+                  <img
+                    src="./assets/node-js.svg"
+                    className="gitImg"
+                    alt="GitHub"
+                  />
+                </Tooltip>
+                <Tooltip title="MongoDB">
+                  <img
+                    src="./assets/mongo.png"
+                    className="gitImg"
+                    alt="GitHub"
+                  />
+                </Tooltip>
+                <Tooltip title="Firebase">
+                  <img
+                    src="./assets/firebase.png"
+                    className="gitImg"
+                    alt="GitHub"
+                  />
+                </Tooltip>
+                <Tooltip title="GitHub">
+                  <img
+                    src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
+                    className="gitImg"
+                    alt="GitHub"
+                  />
+                </Tooltip>
             </div>
           </div>
           <div className="card">
@@ -86,20 +117,106 @@ function MyWork() {
               <span className="smallText">{t('NFT')}</span>
               <br />
               <div className="demo">
-                <a href="https://user-images.githubusercontent.com/51823158/187201996-25453ace-53dc-4a99-a207-2f687bcfca9e.mp4" target="_blank">
+                <a
+                  href="https://user-images.githubusercontent.com/51823158/187201996-25453ace-53dc-4a99-a207-2f687bcfca9e.mp4"
+                  target="_blank"
+                >
                   Video Demo Online{' '}
                 </a>
               </div>
-              <a
-                href="https://github.com/PabloFuentesSanz/PruebaPractica"
-                className="linkNoStyle"
-                target="_blank"
-              >
-                <img
-                  src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
-                  className="gitImg"
-                />
-              </a>
+              <Tooltip title="React">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                    className="gitImg"
+                  />
+                </Tooltip>
+                <Tooltip title="Redux">
+                  <img
+                    src="./assets/redux.png"
+                    className="gitImg"
+                  />
+                </Tooltip>
+                <Tooltip title="ChakraUI">
+                  <img
+                    src="https://www.coffeeclass.io/logos/chakra-ui.png"
+                    className="gitImg"
+                    alt="GitHub"
+                  />
+                </Tooltip>
+                <Tooltip title="NodeJs">
+                  <img
+                    src="./assets/node-js.svg"
+                    className="gitImg"
+                    alt="GitHub"
+                  />
+                </Tooltip>
+                <Tooltip title="MongoDB">
+                  <img
+                    src="./assets/mongo.png"
+                    className="gitImg"
+                    alt="GitHub"
+                  />
+                </Tooltip>
+                <Tooltip title="Firebase">
+                  <img
+                    src="./assets/firebase.png"
+                    className="gitImg"
+                    alt="GitHub"
+                  />
+                </Tooltip>
+                <Tooltip title="GitHub">
+                  <img
+                    src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
+                    className="gitImg"
+                    alt="GitHub"
+                  />
+                </Tooltip>
+            </div>
+          </div>
+          <div className="card">
+            <a
+              href="https://github.com/PabloFuentesSanz/dcycle-prueba-tecnica/"
+              className="linkNoStyle"
+              target="_blank"
+            >
+              <img
+                className="imgCard"
+                src="https://private-user-images.githubusercontent.com/51823158/271328543-293a2b6c-95e0-4c43-85e5-9a15c7628bbf.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTEiLCJleHAiOjE3MDE3MDIxMDIsIm5iZiI6MTcwMTcwMTgwMiwicGF0aCI6Ii81MTgyMzE1OC8yNzEzMjg1NDMtMjkzYTJiNmMtOTVlMC00YzQzLTg1ZTUtOWExNWM3NjI4YmJmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFJV05KWUFYNENTVkVINTNBJTJGMjAyMzEyMDQlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjMxMjA0VDE0NTY0MlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWE0MGY2MTMyMmIyZDMyODU3ZTgwZjBiNWM1ZjM5YTQ0NTEyNDM3YjY3NDVhYWIyYTAwNDNjNzU2ZTY3Nzg4YTAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.E8G44jWoJlLJ_iKaNu8Cmsy1sxCKGvFANbRdk2-xCdE"
+                alt="Avatar"
+              />
+            </a>
+            <div className="containerCard">
+              <p>Technical Test</p>
+              <span className="smallText">{t('dcycle')}</span>
+              <br />
+              <div className="techsImgs">
+                <Tooltip title="React">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                    className="gitImg"
+                  />
+                </Tooltip>
+                <Tooltip title="Vite">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Vitejs-logo.svg/1200px-Vitejs-logo.svg.png"
+                    className="gitImg"
+                  />
+                </Tooltip>
+                <Tooltip title="ChakraUI">
+                  <img
+                    src="https://www.coffeeclass.io/logos/chakra-ui.png"
+                    className="gitImg"
+                    alt="GitHub"
+                  />
+                </Tooltip>
+                <Tooltip title="GitHub">
+                  <img
+                    src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
+                    className="gitImg"
+                    alt="GitHub"
+                  />
+                </Tooltip>
+              </div>
             </div>
           </div>
           <div className="card">
@@ -117,16 +234,7 @@ function MyWork() {
             <div className="containerCard">
               <p>Netflix Clone</p>
               <span className="smallText">{t('net')}</span>
-              <a
-                href="https://github.com/PabloFuentesSanz/Netflix-Clone-React-Redux"
-                className="linkNoStyle"
-                target="_blank"
-              >
-                <img
-                  src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
-                  className="gitImg"
-                />
-              </a>
+
             </div>
           </div>
           <div className="card">
@@ -144,16 +252,7 @@ function MyWork() {
             <div className="containerCard">
               <p>Tinder Clone</p>
               <span className="smallText">{t('tinder')}</span>
-              <a
-                href="https://github.com/PabloFuentesSanz/Tinder-Clone-React"
-                target="_blank"
-                className="linkNoStyle"
-              >
-                <img
-                  src="https://cdn2.downdetector.com/static/uploads/logo/github.logo.png"
-                  className="gitImg"
-                />
-              </a>
+
             </div>
           </div>
         </article>
