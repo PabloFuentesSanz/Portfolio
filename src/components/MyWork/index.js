@@ -181,7 +181,7 @@ function MyWork() {
             >
               <img
                 className="imgCard"
-                src="./assets/dcycle.png"
+                src="./assets/dcyycle.png"
                 alt="Avatar"
               />
             </a>
