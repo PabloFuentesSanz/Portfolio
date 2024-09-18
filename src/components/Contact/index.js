@@ -34,7 +34,7 @@ function Contact() {
               className="linkContact"
             >
               <img
-                src="https://telecos.upc.edu/es/shared/images/social/logos-rodons/linkedin-circle.png/@@images/a17d006e-5c0d-4004-9fe7-650c7fabd690.png"
+                src="./assets/circle-linkedin-512.webp"
                 className="linkContact"
               />
               Linkedin
