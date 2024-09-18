@@ -9,6 +9,25 @@ function MyExperience() {
     <section className="cards contenedor">
       <h2 className="titulo">{t('Expe')}</h2>
       <div className="content-cards">
+      <article className="card cardExp">
+          <i className="far fa-clone"></i>
+          <h3>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/ALTEN_logo.svg/1200px-ALTEN_logo.svg.png"
+              className="logoCompany"
+            />{' '}
+            Alten Delivery Center - Inditex
+          </h3>
+          <p className="content">{t('curr')}</p>
+          <span className="smallText">
+            <small>
+              {t('alten3')}
+              <br />
+              <br />
+              <b>{t('techsN')}</b> React, TypeScript, Amiga (Inditex Framework), CI/CD, Jest 
+            </small>
+          </span>
+        </article>
         <article className="card cardExp">
           <i className="far fa-clone"></i>
           <h3>
@@ -53,9 +72,9 @@ function MyExperience() {
           <i className="fas fa-database"></i>
           <h3>
             <img
-              src="https://pbs.twimg.com/profile_images/502173031234433025/gtzqxUff_400x400.png"
+              src="./assets/zalcu.png"
               className="logoCompany"
-            />{' '}
+            />
             Zalcu
           </h3>
           <p className="content">{t('feb')}</p>
@@ -73,7 +92,7 @@ function MyExperience() {
           <i className="fas fa-database"></i>
           <h3>
             <img
-              src="https://www.itd.upm.es/wp-content/uploads/2020/10/LOGOTIPO-color-PNG.png"
+              src="./assets/upm.png"
               className="logoCompany"
             />{' '}
             {t('intern')}
