@@ -40,6 +40,7 @@ function WaveMenu() {
             </a>
             .
           </small>
+
         </div>
         <img src="./assets/ilustracion1.svg" alt="" />
       </section>
@@ -147,6 +148,7 @@ function WaveMenu() {
             </span>
           </div>
         </div>
+        
       </section>
     </>
   );

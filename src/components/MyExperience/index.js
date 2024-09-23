@@ -15,10 +15,10 @@ function MyExperience() {
             <img
               src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/ALTEN_logo.svg/1200px-ALTEN_logo.svg.png"
               className="logoCompany"
-            />{' '}
+            />
             Alten Delivery Center - Inditex
           </h3>
-          <p className="content">{t('curr')}</p>
+          <p className="content">{t('curr2')}</p>
           <span className="smallText">
             <small>
               {t('alten3')}
@@ -34,7 +34,7 @@ function MyExperience() {
             <img
               src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/ALTEN_logo.svg/1200px-ALTEN_logo.svg.png"
               className="logoCompany"
-            />{' '}
+            />
             Alten Delivery Center - Publicis
           </h3>
           <p className="content">{t('curr')}</p>
@@ -85,6 +85,21 @@ function MyExperience() {
               <br />
               <b>{t('techsN')}</b> React, NodeJS, Python, PHP, MongoDB,
               MySQL,Linux, Git, AmazonWebServices
+            </small>
+          </span>
+        </article>
+        <article className="card cardExp">
+          <i className="far fa-clone"></i>
+          <h3>
+            Freelancer
+          </h3>
+          <p className="content">{t('curr')}</p>
+          <span className="smallText">
+            <small>
+              {t('freelancer')}
+              <br />
+              <br />
+              <b>{t('techsN')}</b> React, TypeScript, NodeJs, MongoDB 
             </small>
           </span>
         </article>
