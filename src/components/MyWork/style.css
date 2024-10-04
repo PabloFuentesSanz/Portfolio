@@ -46,7 +46,7 @@
 
 .path2 {
   stroke: none;
-   fill: #f5576c;
+   fill: var(--primary);
 }
 .techsImgs{
   padding-top: 2em;

@@ -11,7 +11,7 @@ function MyExperience() {
       <div className="content-cards">
       <article className="card cardExp">
           <i className="far fa-clone"></i>
-          <h3>
+          <h3 className="title">
             <img
               src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/ALTEN_logo.svg/1200px-ALTEN_logo.svg.png"
               className="logoCompany"
@@ -30,11 +30,11 @@ function MyExperience() {
         </article>
         <article className="card cardExp">
           <i className="far fa-clone"></i>
-          <h3>
             <img
               src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/ALTEN_logo.svg/1200px-ALTEN_logo.svg.png"
               className="logoCompany"
             />
+          <h3 className="title">
             Alten Delivery Center - Publicis
           </h3>
           <p className="content">{t('curr')}</p>
@@ -49,7 +49,7 @@ function MyExperience() {
         </article>
         <article className="card cardExp">
           <i className="far fa-clone"></i>
-          <h3>
+          <h3 className="title">
             <img
               src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e4/ALTEN_logo.svg/1200px-ALTEN_logo.svg.png"
               className="logoCompany"
@@ -70,7 +70,7 @@ function MyExperience() {
         </article>
         <article className="card cardExp">
           <i className="fas fa-database"></i>
-          <h3>
+          <h3 className="title">
             <img
               src="./assets/zalcu.png"
               className="logoCompany"
@@ -90,7 +90,7 @@ function MyExperience() {
         </article>
         <article className="card cardExp">
           <i className="far fa-clone"></i>
-          <h3>
+          <h3 className="title">
             Freelancer
           </h3>
           <p className="content">{t('curr')}</p>
@@ -105,7 +105,7 @@ function MyExperience() {
         </article>
         <article className="card cardExp">
           <i className="fas fa-database"></i>
-          <h3>
+          <h3 className="title">
             <img
               src="./assets/upm.png"
               className="logoCompany"
@@ -121,7 +121,7 @@ function MyExperience() {
         </article>
         <article className="card cardExp">
           <i className="far fa-object-group"></i>
-          <h3>
+          <h3 className="title">
             <img
               src="./assets/accenture.png"
               className="logoCompany"

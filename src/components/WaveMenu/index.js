@@ -116,7 +116,7 @@ function WaveMenu() {
               <a href="https://www.mysql.com/" target="_blank" title="MySQL">
                 <img
                   className="imgTech"
-                  src="https://icons-for-free.com/iconfiles/png/512/development+logo+mysql+icon-1320184807686758112.png"
+                  src="./assets/mySql.png"
                 />
               </a>
               <a
