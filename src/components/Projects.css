@@ -3,175 +3,584 @@
   background: var(--color-surface);
 }
 
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+/* ---------- Plattio showcase ---------- */
+
+.plattio-showcase {
+  position: relative;
+  border: 1px solid var(--color-border);
+  border-radius: 24px;
+  padding: var(--spacing-2xl);
+  background:
+    radial-gradient(circle at top right, rgba(59, 130, 246, 0.08), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent 40%),
+    var(--color-bg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
 }
 
-.project-card {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+.plattio-showcase::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 90% -10%, rgba(139, 92, 246, 0.12), transparent 50%);
+}
+
+.plattio-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.plattio-identity {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.plattio-logo {
+  width: 72px;
+  height: 72px;
   border-radius: 16px;
-  padding: var(--spacing-xl);
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
+  overflow: hidden;
+  padding: 8px;
+}
+
+.plattio-logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.plattio-logo.media-placeholder--empty {
+  background: linear-gradient(135deg, var(--color-accent), #8b5cf6);
+  color: white;
+}
+
+.plattio-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.plattio-name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.plattio-tagline {
+  color: var(--color-text-secondary);
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}
+
+.plattio-socials {
+  display: flex;
+  gap: var(--spacing-xs);
+  position: relative;
+}
+
+.plattio-social {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text-secondary);
+  background: rgba(255, 255, 255, 0.02);
+  transition: all var(--transition-fast);
+}
+
+.plattio-social svg {
+  width: 18px;
+  height: 18px;
+}
+
+.plattio-social:hover {
+  color: var(--color-text);
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.plattio-description {
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  max-width: 70ch;
+  position: relative;
+}
+
+.plattio-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) 0;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  position: relative;
+}
+
+.plattio-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.plattio-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+}
+
+.plattio-stat-label {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+.plattio-block {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
-  transition: all var(--transition-normal);
-  position: relative;
-  overflow: hidden;
 }
 
-.project-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-accent), #8b5cf6);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform var(--transition-normal);
-}
-
-.project-card:hover {
-  border-color: var(--color-accent);
-  transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-}
-
-.project-card:hover::before {
-  transform: scaleX(1);
-}
-
-.project-card.featured {
-  border-color: rgba(59, 130, 246, 0.3);
-  background: linear-gradient(
-    135deg,
-    rgba(59, 130, 246, 0.05),
-    rgba(139, 92, 246, 0.05)
-  );
-}
-
-.featured-badge {
-  position: absolute;
-  top: var(--spacing-md);
-  right: var(--spacing-md);
-  padding: var(--spacing-xs) var(--spacing-md);
-  background: rgba(59, 130, 246, 0.2);
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  border-radius: 100px;
-  color: var(--color-accent);
+.plattio-block-title {
   font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-text-secondary);
   font-weight: 600;
 }
 
-.project-header {
-  margin-bottom: var(--spacing-sm);
+.plattio-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-md);
 }
 
-.project-name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: var(--spacing-xs);
-  background: linear-gradient(135deg, var(--color-text), var(--color-accent));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.project-tagline {
-  color: var(--color-text-secondary);
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
-.project-description {
-  color: var(--color-text-secondary);
-  line-height: 1.7;
-  flex-grow: 1;
-}
-
-.project-highlights {
-  list-style: none;
+.plattio-product {
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.015);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
+  transition: all var(--transition-fast);
 }
 
-.project-highlights li {
-  position: relative;
-  padding-left: var(--spacing-lg);
-  color: var(--color-text-secondary);
+.plattio-product:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  transform: translateY(-2px);
+}
+
+.plattio-product-tag {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-accent);
+  font-weight: 600;
+}
+
+.plattio-product-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.plattio-product-description {
   font-size: 0.875rem;
+  color: var(--color-text-secondary);
   line-height: 1.6;
 }
 
-.project-highlights li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--color-accent);
-  font-weight: 700;
+/* Gallery — horizontal scroll-snap, no JS */
+.plattio-gallery {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(280px, 360px);
+  gap: var(--spacing-md);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: var(--spacing-sm);
+  margin: 0 calc(var(--spacing-2xl) * -1);
+  padding-left: var(--spacing-2xl);
+  padding-right: var(--spacing-2xl);
 }
 
-.project-tech {
+.plattio-gallery::-webkit-scrollbar {
+  height: 6px;
+}
+
+.plattio-gallery::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+
+.plattio-gallery-item {
+  aspect-ratio: 4 / 3;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  scroll-snap-align: start;
+  background: var(--color-surface);
+  padding: 0;
+  cursor: zoom-in;
+  position: relative;
+  display: block;
+}
+
+.plattio-gallery-zoom {
+  position: absolute;
+  top: var(--spacing-xs);
+  right: var(--spacing-xs);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(10, 10, 10, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: white;
+  opacity: 0;
+  transition: opacity var(--transition-fast);
+  backdrop-filter: blur(8px);
+}
+
+.plattio-gallery-zoom svg {
+  width: 16px;
+  height: 16px;
+}
+
+.plattio-gallery-item:hover .plattio-gallery-zoom,
+.plattio-gallery-item:focus-visible .plattio-gallery-zoom {
+  opacity: 1;
+}
+
+.plattio-gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-slow);
+}
+
+.plattio-gallery-item:hover .plattio-gallery-img {
+  transform: scale(1.03);
+}
+
+.plattio-partners {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--spacing-sm);
+}
+
+.plattio-partner {
+  aspect-ratio: 3 / 2;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all var(--transition-fast);
+}
+
+.plattio-partner:hover {
+  border-color: var(--color-accent);
+  transform: translateY(-2px);
+}
+
+.plattio-partner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: var(--spacing-sm);
+  filter: grayscale(1);
+  opacity: 0.85;
+  transition: all var(--transition-fast);
+}
+
+.plattio-partner:hover .plattio-partner-img {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* Generic placeholder behavior: shows fallback text only if the image fails */
+.media-placeholder {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.media-placeholder-fallback {
+  position: absolute;
+  inset: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-align: center;
+  padding: var(--spacing-sm);
+}
+
+.media-placeholder--empty .media-placeholder-fallback {
+  display: flex;
+}
+
+/* ---------- Other (smaller) projects ---------- */
+
+.other-projects-title {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  margin-bottom: var(--spacing-lg);
+}
+
+.other-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.mini-project {
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: var(--spacing-lg);
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  transition: all var(--transition-fast);
+}
+
+.mini-project:hover {
+  border-color: var(--color-text-secondary);
+  transform: translateY(-2px);
+}
+
+.mini-project-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.mini-project-tagline {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+.mini-project-description {
+  color: var(--color-text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.mini-project-tech {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-xs);
-  padding-top: var(--spacing-sm);
-  border-top: 1px solid var(--color-border);
 }
 
-.project-links {
+.tech-tag {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border);
+}
+
+.mini-project-links {
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-md);
-  padding-top: var(--spacing-sm);
+  padding-top: var(--spacing-xs);
 }
 
-.project-link {
+.mini-project-link {
   color: var(--color-accent);
   font-weight: 600;
-  font-size: 0.875rem;
-  transition: all var(--transition-fast);
-  position: relative;
+  font-size: 0.8125rem;
+  transition: color var(--transition-fast);
 }
 
-.project-link::after {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background: var(--color-accent);
-  transition: width var(--transition-normal);
-}
-
-.project-link:hover {
+.mini-project-link:hover {
   color: var(--color-accent-hover);
 }
 
-.project-link:hover::after {
-  width: 100%;
+/* ---------- Lightbox ---------- */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.92);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-lg);
+  cursor: zoom-out;
+  animation: lightboxFadeIn 180ms ease;
 }
+
+@keyframes lightboxFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.lightbox-img {
+  max-width: min(1400px, 95vw);
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+  cursor: default;
+  animation: lightboxZoomIn 220ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes lightboxZoomIn {
+  from { transform: scale(0.96); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.lightbox-button {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  backdrop-filter: blur(8px);
+  font-family: inherit;
+  line-height: 1;
+}
+
+.lightbox-button:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.lightbox-close {
+  top: var(--spacing-md);
+  right: var(--spacing-md);
+  width: 48px;
+  height: 48px;
+  font-size: 1.75rem;
+  font-weight: 300;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  font-size: 2rem;
+  font-weight: 300;
+  padding-bottom: 4px;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+.lightbox-prev { left: var(--spacing-md); }
+.lightbox-next { right: var(--spacing-md); }
+
+.lightbox-counter {
+  position: absolute;
+  bottom: var(--spacing-md);
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+  padding: 0.5rem 0.875rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  backdrop-filter: blur(8px);
+}
+
+/* ---------- Responsive ---------- */
 
 @media (max-width: 768px) {
   .projects {
     padding: var(--spacing-2xl) var(--spacing-md);
   }
 
-  .projects-grid {
+  .plattio-showcase {
+    padding: var(--spacing-lg);
+    border-radius: 18px;
+  }
+
+  .plattio-name {
+    font-size: 1.875rem;
+  }
+
+  .plattio-stat-value {
+    font-size: 1.5rem;
+  }
+
+  .plattio-gallery {
+    margin: 0 calc(var(--spacing-lg) * -1);
+    padding-left: var(--spacing-lg);
+    padding-right: var(--spacing-lg);
+    grid-auto-columns: minmax(240px, 80%);
+  }
+
+  .other-projects-grid {
     grid-template-columns: 1fr;
   }
 
-  .project-card {
-    padding: var(--spacing-md);
+  .lightbox-prev,
+  .lightbox-next {
+    width: 44px;
+    height: 44px;
+    font-size: 1.5rem;
   }
 
-  .project-name {
-    font-size: 1.25rem;
+  .lightbox-close {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
   }
 }
