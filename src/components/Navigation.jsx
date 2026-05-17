@@ -1,27 +1,38 @@
-import { useState, useEffect } from "react";
-import "./Navigation.css";
+import { useState, useEffect } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import './Navigation.css';
 
 function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const { pathname } = useLocation();
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const link = (anchor, label) =>
+    isHome ? (
+      <a href={`#${anchor}`}>{label}</a>
+    ) : (
+      <Link to={`/#${anchor}`}>{label}</Link>
+    );
+
   return (
-    <nav className={`navigation ${isScrolled ? "scrolled" : ""}`}>
+    <nav className={`navigation ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <a href="#hero" className="nav-logo">
+        <Link to="/" className="nav-logo">
           PF
-        </a>
+        </Link>
         <div className="nav-links">
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          {link('experience', 'Experience')}
+          {link('projects', 'Projects')}
+          {link('articles', 'Articles')}
+          {link('contact', 'Contact')}
         </div>
       </div>
     </nav>

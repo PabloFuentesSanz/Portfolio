@@ -31,6 +31,9 @@ function Hero() {
             <a href="#projects" className="btn btn-secondary">
               View my work
             </a>
+            <a href="#articles" className="btn btn-tertiary">
+              Read my articles
+            </a>
           </div>
 
           <div className="hero-social">

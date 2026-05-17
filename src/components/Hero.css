@@ -115,6 +115,7 @@
 
 .hero-cta {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--spacing-md);
   margin-top: var(--spacing-md);
   animation: fadeInUp 0.6s ease 0.4s backwards;
@@ -153,6 +154,35 @@
   border-color: var(--color-accent);
   color: var(--color-accent);
   transform: translateY(-2px);
+}
+
+.btn-tertiary {
+  background: transparent;
+  color: var(--color-text-secondary);
+  padding-left: var(--spacing-sm);
+  padding-right: var(--spacing-sm);
+  position: relative;
+}
+
+.btn-tertiary::after {
+  content: '';
+  position: absolute;
+  left: var(--spacing-sm);
+  right: var(--spacing-sm);
+  bottom: calc(var(--spacing-md) - 4px);
+  height: 1px;
+  background: currentColor;
+  opacity: 0.3;
+  transition: opacity var(--transition-fast);
+}
+
+.btn-tertiary:hover {
+  color: var(--color-text);
+  transform: translateY(-2px);
+}
+
+.btn-tertiary:hover::after {
+  opacity: 1;
 }
 
 .hero-social {
