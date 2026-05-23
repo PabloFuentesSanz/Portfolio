@@ -1,8 +1,5 @@
 import whyIDeletedMyUseMemos from './articles-content/why-i-deleted-my-usememos.md?raw';
-import shippingARestaurantOs from './articles-content/shipping-a-restaurant-os.md?raw';
-import tddOnRealProducts from './articles-content/tdd-on-real-products.md?raw';
-import reactArchitectureAtScale from './articles-content/react-architecture-at-scale.md?raw';
-import extremeProgrammingMercadona from './articles-content/extreme-programming-mercadona.md?raw';
+import testsThatSurviveRefactors from './articles-content/tests-that-survive-refactors.md?raw';
 
 export const articles = [
   {
@@ -22,52 +19,16 @@ export const articles = [
     content: whyIDeletedMyUseMemos,
   },
   {
-    slug: 'shipping-a-restaurant-os',
-    title: 'Shipping a restaurant OS as a founding engineer',
+    slug: 'tests-that-survive-refactors',
+    title: 'Tests that survive refactors',
+    subtitle: 'Frontend TDD with MSW — beyond the 95% coverage trap',
     excerpt:
-      'Lessons from building Plattio from zero to 50+ restaurants in production. Architecture decisions, scope cuts, and what I would do differently.',
-    cover: '/assets/articles/article-1.jpg',
-    date: '2026-05-10',
-    readingTime: '8 min read',
-    tags: ['Engineering', 'Product'],
-    draft: true,
-    content: shippingARestaurantOs,
-  },
-  {
-    slug: 'tdd-on-real-products',
-    title: 'TDD on real products, not katas',
-    excerpt:
-      'Why test-driven development survives contact with real codebases — and the small adjustments that make it stick on a shipping team.',
-    cover: '/assets/articles/article-2.jpg',
-    date: '2026-04-22',
-    readingTime: '6 min read',
-    tags: ['Engineering', 'Testing'],
-    draft: true,
-    content: tddOnRealProducts,
-  },
-  {
-    slug: 'react-architecture-at-scale',
-    title: 'React architecture that survives the team growing',
-    excerpt:
-      'How to structure a React app so that the second, fifth, and tenth engineer can ship without stepping on each other.',
-    cover: '/assets/articles/article-3.jpg',
-    date: '2026-03-15',
-    readingTime: '10 min read',
-    tags: ['React', 'Architecture'],
-    draft: true,
-    content: reactArchitectureAtScale,
-  },
-  {
-    slug: 'extreme-programming-mercadona',
-    title: 'What I learned about XP at Mercadona Tech',
-    excerpt:
-      'Pair programming, no estimates, and continuous deployment — the parts of Extreme Programming that actually changed how I work.',
-    cover: '/assets/articles/article-4.jpg',
-    date: '2026-02-28',
-    readingTime: '7 min read',
-    tags: ['Engineering', 'Culture'],
-    draft: true,
-    content: extremeProgrammingMercadona,
+      'A 95% coverage suite that breaks 400 tests on a library swap isn\'t protecting the product — it\'s protecting the implementation. How black-box TDD with MSW changes that.',
+    cover: '/assets/articles/tests-that-survive-refactors/cover.jpeg',
+    date: '2026-05-23',
+    readingTime: '9 min read',
+    tags: ['Testing', 'TDD', 'Frontend'],
+    content: testsThatSurviveRefactors,
   },
 ];
 

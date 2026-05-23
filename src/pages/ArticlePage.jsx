@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { Link, useParams, Navigate } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeHighlight from 'rehype-highlight';
+import 'highlight.js/styles/github-dark.css';
 import Navigation from '../components/Navigation';
 import {
   getArticleBySlug,
@@ -109,7 +111,8 @@ const markdownComponents = {
   pre: ({ children, ...rest }) => {
     const codeChild = Array.isArray(children) ? children[0] : children;
     const langClass = codeChild?.props?.className ?? '';
-    const lang = langClass.replace('language-', '');
+    const langMatch = langClass.match(/language-([\w-]+)/);
+    const lang = langMatch?.[1];
     return (
       <pre data-lang={lang || undefined} {...rest}>
         {children}
@@ -194,7 +197,19 @@ function ArticlePage() {
           </header>
 
           <div className="article-content">
-            <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              rehypePlugins={[
+                [
+                  rehypeHighlight,
+                  {
+                    ignoreMissing: true,
+                    aliases: { javascript: ['jsx'], typescript: ['tsx'] },
+                  },
+                ],
+              ]}
+              components={markdownComponents}
+            >
               {article.content}
             </ReactMarkdown>
           </div>

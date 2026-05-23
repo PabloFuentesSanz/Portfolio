@@ -293,11 +293,15 @@
   background: transparent;
   border: none;
   border-radius: 0;
-  color: #d4d4d4;
   font-size: 0.875rem;
   line-height: 1.6;
   overflow-x: auto;
   white-space: pre;
+}
+
+.article-content pre code.hljs {
+  background: transparent;
+  padding: var(--spacing-md);
 }
 
 .article-content hr {
