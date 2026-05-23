@@ -8,7 +8,7 @@ export const articles = [
     subtitle: 'React Compiler — the realistic guide',
     excerpt:
       'Originally published in the Mercadona Tech newsletter. A lab project comparing three React rendering strategies: no optimization, manual memoization, and the new React Compiler — with hard numbers from the Profiler.',
-    cover: '/assets/articles/react-compiler/cover.jpeg',
+    cover: '/assets/articles/react-compiler/cover.png',
     date: '2026-03-30',
     readingTime: '10 min read',
     tags: ['React', 'Performance', 'Architecture'],
