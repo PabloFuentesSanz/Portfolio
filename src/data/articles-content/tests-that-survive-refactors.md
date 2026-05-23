@@ -26,7 +26,7 @@ Coverage tells you which lines were executed. It never tells you whether the cod
 
 ## How would you test an Auth Gate?
 
-To bring all this theory down to earth, let's look at a classic problem in any product app. After a slicing session, we pulled out this vertical slice:
+To bring all this theory down to earth, let's look at a classic problem in any product app. After a story slicing session, we came up with this vertical slice:
 
 > "When a user enters the root route (/) of the application, the system verifies whether they're authenticated. If there is no valid session, the app shows a loading screen and redirects the user to an external provider for authentication."
 
@@ -69,7 +69,7 @@ As the official ***React Testing Library*** docs warn:
 
 ### Test the whole application, not amputated trees
 
-TDD has a bad reputation in the frontend for some people because they try to write rigid unit tests before knowing what the component structure will look like.
+TDD has a bad reputation among some frontend developers because they try to write rigid unit tests before knowing what the component structure will look like.
 
 The secret to making TDD efficient, fluid, and addictive is to flip the mindset — and I didn't really learn this until I understood that we need to ***FOCUS THE TEST ON THE INTEGRATION OF USER BEHAVIOR.***
 
@@ -81,7 +81,7 @@ By mounting the full app and navigating programmatically, we treat our software 
 2. **The Mother Pattern:** we get the giant JSON payloads out of the tests and isolate them in object factories that represent semantic business scenarios.
 3. **Behavior helpers:** we abstract repetitive interactions into small, readable functions, keeping the test focused purely on the product narrative.
 
-TDD fails when you try to use it to design the internals of your code. But if you're testing the whole application, **doing TDD means designing the product's behavior, not the file structure**. Writing the test before the code exists is nothing more than transcribing the slicing session you just had into a validator.
+TDD fails when you try to use it to design the internals of your code. But if you're testing the whole application, **doing TDD means designing the product's behavior, not the file structure**. Writing the test before the code exists is simply a matter of transcribing the slicing session you just had into a validator.
 
 ### Phase 1: RED (design the behavior before the code exists)
 
