@@ -38,27 +38,27 @@ const plattio = {
   ],
   gallery: [
     {
-      src: '/assets/plattio/gallery-1.png',
+      src: '/assets/plattio/gallery-3.jpeg',
       alt: 'Plattio product screenshot 1',
     },
     {
-      src: '/assets/plattio/gallery-2.png',
+      src: '/assets/plattio/gallery-4.jpeg',
       alt: 'Plattio product screenshot 2',
     },
     {
-      src: '/assets/plattio/gallery-3.png',
+      src: '/assets/plattio/gallery-5.jpeg',
       alt: 'Plattio product screenshot 3',
     },
     {
-      src: '/assets/plattio/gallery-4.jpeg',
+      src: '/assets/plattio/gallery-6.jpeg',
       alt: 'Plattio product screenshot 4',
     },
     {
-      src: '/assets/plattio/gallery-5.jpeg',
+      src: '/assets/plattio/gallery-1.png',
       alt: 'Plattio product screenshot 5',
     },
     {
-      src: '/assets/plattio/gallery-6.jpeg',
+      src: '/assets/plattio/gallery-2.png',
       alt: 'Plattio product screenshot 6',
     },
   ],
