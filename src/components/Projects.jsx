@@ -83,19 +83,47 @@ const plattio = {
   ],
 };
 
-const otherProjects = [
-  {
-    name: 'Kanso UI',
-    tagline: 'Minimalist React Component Library',
-    description:
-      'Accessible, tree-shakeable React components in TypeScript, published on NPM with full Storybook documentation.',
-    tech: ['React', 'TypeScript', 'Storybook'],
-    links: {
-      demo: 'https://kanso-ui.vercel.app/',
-      npm: 'https://www.npmjs.com/package/kanso-ui',
-      github: 'https://github.com/PabloFuentesSanz/kanso-ui',
-    },
+const kanso = {
+  name: 'Kanso UI',
+  eyebrow: '寛素UI',
+  tagline: 'Kanso is restraint.',
+  description:
+    'A design system built on three principles of Japanese aesthetics — ma, wabi and sabi. Strip until nothing remains that can be stripped. The margin is part of the design.',
+  links: {
+    demo: 'https://kanso-ui.vercel.app/',
+    npm: 'https://www.npmjs.com/package/kanso-ui',
+    github: 'https://github.com/PabloFuentesSanz/kanso-ui',
   },
+  principles: [
+    {
+      kanji: '間',
+      romaji: 'ma',
+      label: 'space',
+      body: 'Empty space carries the same weight as filled space. Margins are not negative; they are the design.',
+    },
+    {
+      kanji: '侘',
+      romaji: 'wabi',
+      label: 'humility',
+      body: 'Beauty in what is imperfect, functional and honest. No ornament for ornament’s sake.',
+    },
+    {
+      kanji: '寂',
+      romaji: 'sabi',
+      label: 'austerity',
+      body: 'Only what is essential. If an element has no clear job, it does not appear.',
+    },
+  ],
+  rule: 'Remove until nothing remains that can be removed.',
+  gallery: [
+    {
+      src: '/assets/kanso-ui/kanso.png',
+      alt: 'Kanso UI foundations — principles, type and the golden rule',
+    },
+  ],
+};
+
+const otherProjects = [
   {
     name: 'CodeWithPablo',
     tagline: 'Project Scaffolding CLI',
@@ -163,6 +191,22 @@ function InstagramIcon() {
       <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
       <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
       <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+    </svg>
+  );
+}
+
+function GithubIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56 0-.27-.01-1-.02-1.96-3.2.69-3.87-1.54-3.87-1.54-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.18-3.09-.12-.29-.51-1.46.11-3.04 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.12 3.04.74.81 1.18 1.83 1.18 3.09 0 4.42-2.69 5.4-5.25 5.69.41.36.78 1.07.78 2.16 0 1.56-.01 2.82-.01 3.21 0 .31.21.67.8.55C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z" />
+    </svg>
+  );
+}
+
+function NpmIcon() {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M3 3h18v18H3V3zm15 15V6H6v12h6v-9h3v9h3z" />
     </svg>
   );
 }
@@ -237,19 +281,36 @@ function Lightbox({ images, index, onClose, onPrev, onNext }) {
 }
 
 function Projects() {
-  const [lightboxIndex, setLightboxIndex] = useState(null);
+  const [lightbox, setLightbox] = useState(null);
 
-  const closeLightbox = useCallback(() => setLightboxIndex(null), []);
+  const closeLightbox = useCallback(() => setLightbox(null), []);
   const showPrev = useCallback(
     () =>
-      setLightboxIndex(
-        (current) =>
-          (current - 1 + plattio.gallery.length) % plattio.gallery.length,
-      ),
+      setLightbox((current) => {
+        if (!current) return null;
+        const length = current.gallery.length;
+        return {
+          ...current,
+          index: (current.index - 1 + length) % length,
+        };
+      }),
     [],
   );
   const showNext = useCallback(
-    () => setLightboxIndex((current) => (current + 1) % plattio.gallery.length),
+    () =>
+      setLightbox((current) => {
+        if (!current) return null;
+        const length = current.gallery.length;
+        return {
+          ...current,
+          index: (current.index + 1) % length,
+        };
+      }),
+    [],
+  );
+
+  const openLightbox = useCallback(
+    (gallery, index) => setLightbox({ gallery, index }),
     [],
   );
 
@@ -348,7 +409,7 @@ function Projects() {
                   key={image.src}
                   className="plattio-gallery-item media-placeholder"
                   role="listitem"
-                  onClick={() => setLightboxIndex(index)}
+                  onClick={() => openLightbox(plattio.gallery, index)}
                   aria-label={`Open ${image.alt}`}
                 >
                   <ImageWithFallback
@@ -393,6 +454,127 @@ function Projects() {
                     {partner.name}
                   </span>
                 </div>
+              ))}
+            </div>
+          </div>
+        </article>
+
+        <article className="kanso-showcase">
+          <header className="kanso-header">
+            <div className="kanso-identity">
+              <div className="kanso-logo media-placeholder">
+                <ImageWithFallback
+                  src="/assets/kanso-ui/logo.png"
+                  alt="Kanso UI logo"
+                  className="kanso-logo-img"
+                />
+                <span className="media-placeholder-fallback kanso-logo-fallback">
+                  寛素
+                </span>
+              </div>
+              <div>
+                <p className="kanso-eyebrow">{kanso.eyebrow}</p>
+                <h3 className="kanso-name">{kanso.name}</h3>
+                <p className="kanso-tagline">{kanso.tagline}</p>
+              </div>
+            </div>
+
+            <div className="kanso-socials">
+              <a
+                href={kanso.links.demo}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="kanso-social"
+                aria-label="Kanso UI live demo"
+              >
+                <GlobeIcon />
+              </a>
+              <a
+                href={kanso.links.npm}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="kanso-social"
+                aria-label="Kanso UI on NPM"
+              >
+                <NpmIcon />
+              </a>
+              <a
+                href={kanso.links.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="kanso-social"
+                aria-label="Kanso UI on GitHub"
+              >
+                <GithubIcon />
+              </a>
+            </div>
+          </header>
+
+          <p className="kanso-description">{kanso.description}</p>
+
+          <div className="kanso-block">
+            <h4 className="kanso-block-title">01 · Principles</h4>
+            <p className="kanso-block-lead">
+              Three ideas, one rule. Every component decision in Kanso UI can be
+              traced back to one of these.
+            </p>
+            <div className="kanso-principles">
+              {kanso.principles.map((principle) => (
+                <div key={principle.romaji} className="kanso-principle">
+                  <span className="kanso-principle-kanji" aria-hidden="true">
+                    {principle.kanji}
+                  </span>
+                  <div className="kanso-principle-meta">
+                    <span className="kanso-principle-romaji">
+                      {principle.romaji}
+                    </span>
+                    <span className="kanso-principle-label">
+                      {principle.label}
+                    </span>
+                  </div>
+                  <p className="kanso-principle-body">{principle.body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="kanso-rule">
+            <span className="kanso-rule-label">02 · The golden rule</span>
+            <p className="kanso-rule-body">{kanso.rule}</p>
+          </div>
+
+          <div className="kanso-block">
+            <h4 className="kanso-block-title">03 · Inside the system</h4>
+            <div className="kanso-showcase-grid" role="list">
+              {kanso.gallery.map((image, index) => (
+                <button
+                  type="button"
+                  key={image.src}
+                  className="kanso-showcase-item media-placeholder"
+                  role="listitem"
+                  onClick={() => openLightbox(kanso.gallery, index)}
+                  aria-label={`Open ${image.alt}`}
+                >
+                  <ImageWithFallback
+                    src={image.src}
+                    alt={image.alt}
+                    className="kanso-showcase-img"
+                  />
+                  <span className="media-placeholder-fallback">Image</span>
+                  <span className="kanso-showcase-zoom" aria-hidden="true">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth={2}
+                    >
+                      <circle cx="11" cy="11" r="8" />
+                      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                      <line x1="11" y1="8" x2="11" y2="14" />
+                      <line x1="8" y1="11" x2="14" y2="11" />
+                    </svg>
+                  </span>
+                </button>
               ))}
             </div>
           </div>
@@ -465,10 +647,10 @@ function Projects() {
         </div>
       </div>
 
-      {lightboxIndex !== null && (
+      {lightbox && (
         <Lightbox
-          images={plattio.gallery}
-          index={lightboxIndex}
+          images={lightbox.gallery}
+          index={lightbox.index}
           onClose={closeLightbox}
           onPrev={showPrev}
           onNext={showNext}
